@@ -5,7 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
     <link rel="stylesheet" href="./reset.css">
-   
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1644992_rtwx98jy9m.css">
     <title>React App</title>
   </head>
   <style>
@@ -15,41 +15,8 @@
   </style>
   <body>
     <noscript>请换升级浏览器至最新版本</noscript>
-    <div id="root"  style="width:375px;height:50px;background:red;">
+    <div id="root">
 
     </div>
-
-    <script>
-      !(function(win, doc) {
-          function setFontSize() {
-              var baseFontSize = 100;
-              var baseWidth = 320;
-              var clientWidth = document.documentElement.clientWidth || window.innerWidth;
-              var innerWidth = Math.max(Math.min(clientWidth, 480), 320);
-              var rem = 100;
-              if (innerWidth > 362 && innerWidth <= 375) {
-                  rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.9);
-              }
-              if (innerWidth > 375) {
-                  rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.84);
-              }
-              window.__baseREM = rem;
-              document.querySelector('html').style.fontSize = rem + 'px';
-          }
-          var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
-          var timer = null;
-          win.addEventListener(evt, function() {
-              clearTimeout(timer);
-              timer = setTimeout(setFontSize, 300);
-          }, false);
-          win.addEventListener("pageshow", function(e) {
-              if (e.persisted) {
-                  clearTimeout(timer);
-                  timer = setTimeout(setFontSize, 300);
-              }
-          }, false);
-          setFontSize();
-      }(window, document));
-  </script>
   </body>
 </html>
